@@ -107,7 +107,7 @@ p_fdr_matrix <- matrix(p.adjust(as.vector(p_values), method = "fdr"),
 
 
 
-#### Supplementary results: Behavioral Results #########
+######### Supplementary results: Behavioral Results #########
 
 ## EAC child report ---------------
 
