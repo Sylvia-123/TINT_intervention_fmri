@@ -22,7 +22,7 @@ analysis_data <- read_excel("analysis_data.xlsx")
 ######### Primary Outcome: fMRI ############
 
 # Affect Labeling mixed models ----------------------------------
-# Affect label > observe
+# Affect label > observe (20,32,38) SFG
 
 ObserveSFG <- lmer(ObserveSFG ~ group * time +  (1 | tintb_id), data = analysis_data)
 summary(ObserveSFG)
