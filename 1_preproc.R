@@ -346,10 +346,9 @@ psych::alpha(eac_data_t3[c("eacp_31", "eacp_32", "eacp_33", "eacp_34", "eacp_35"
 
 
 ###### EAC scoring ----------------
-# The same scoring approach as the previous TINT trial, Havighurst 2015)
+# The same EAC scoring approach as Havighurst 2015
 
 # EAC child report
-# create total emotion  dismissing and subscales by emotions 
 eac_data <- eac_data %>% mutate(eac_dismissing_sad_c= 
                           eacc_1 + eacc_2 +  eacc_3 + eacc_4 + eacc_5 +  eacc_6 + eacc_7 + eacc_8 + eacc_9 +
                           eacc_10+ eacc_11 + eacc_12 + eacc_13 + eacc_14 +  eacc_15)
