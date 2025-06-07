@@ -7,7 +7,7 @@ This paper examines the impact of TINT parenting intervention on brain function 
 
 ## Primary outcomes
 - Intervention effects on neural activation during emotion regulation (group * time interaction effect).
-- Two fMRI tasks: affect labeling (Affect label > Observe contrast), and reappraisal (Reappraisal > Look negative contrast).
+- - Two fMRI tasks: affect labeling (Affect label > Observe contrast), and reappraisal (Reappraisal > Look negative contrast).
 - Parametric analysis performed in SPM12 using a flexible factorial design
 - Non-parametric analysis performed in SPM12 using Sandwich Estimator (SwE) 
 - BOLD signal for each participant at each timepoint was extracted from a 5mm radius sphere around the peak MNI for follow-up analysis using mixed effects models in R
