@@ -1,7 +1,7 @@
 # TINT_fmri_activation
-TINT parenting intervention effects on adolescent brain activation during emotion regulation
+This paper examines the impact of TINT parenting intervention on brain function in early adolescent girls with elevated internalizing symptoms.
 
-# Primary outcomes
+## Primary outcomes
 Intervention effects on neural activation during emotion regulation (group * time interaction effect).
 Two fMRI tasks: affect labeling (Affect label > Observe contrast), and reappraisal (Reappraisal > Look negative contrast).
 Parametric analysis performed in SPM12 using a flexible factorial design: https://www.nemotos.net/resources/conweights.pdf
