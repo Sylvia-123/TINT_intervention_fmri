@@ -1,5 +1,7 @@
 # TINT_fmri_activation
 This paper examines the impact of TINT parenting intervention on brain function in early adolescent girls with elevated internalizing symptoms.
+fMRI analysis conducted in SPM
+brain-behavior and behavioral analysis conducted in R
 
 ## Primary outcomes
 - Intervention effects on neural activation during emotion regulation (group * time interaction effect).
@@ -10,5 +12,5 @@ This paper examines the impact of TINT parenting intervention on brain function 
 
 
 ## Secondary outcomes
-Correlations between Δ BOLD signal (clusters showing significant group*time) and Δ EAC/RCADS
+- Correlations between Δ BOLD signal (clusters showing significant group*time) and Δ EAC/RCADS
 
