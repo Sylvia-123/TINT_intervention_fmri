@@ -1,4 +1,3 @@
-# TINT_fmri_activation
 This paper examines the impact of TINT parenting intervention on brain function in early adolescent girls with elevated internalizing symptoms.
 - fMRI analysis conducted in SPM12
 - brain-behavior and behavioral analysis conducted in R 4.3.2
