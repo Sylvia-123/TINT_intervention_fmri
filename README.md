@@ -14,7 +14,7 @@ This paper examines the impact of TINT parenting intervention on brain function 
 ## Secondary outcomes
 - Correlations between Δ BOLD signal (clusters showing significant group*time) and Δ EAC/RCADS
 
-### useful resources
+### Useful resources
 - Sandwich Estimator (SwE) toolbox:https://www.nisox.org/Software/SwE/; https://groups.google.com/g/swe-toolbox/c/Gk3mybwW5aA/m/twi8fY1RBAAJ
 - Contrast weight for flexible factorial design: https://www.researchgate.net/profile/Darren-Gitelman/publication/267779738_Contrast_weights_in_flexible_factorial_design_with_multiple_groups_of_subjects/links/56defe8a08aec8c022cf3629/Contrast-weights-in-flexible-factorial-design-with-multiple-groups-of-subjects.pdf
 
