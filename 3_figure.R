@@ -14,9 +14,9 @@ library(tidyr)
 diff_data <- read_excel("diff_data.xlsx")
 custom_palette <- c("#374E55FF", "#DF8F44FF")
 
-#########################
-#### PRIMARY OUTCOME ####
-#########################
+
+######### PRIMARY OUTCOME #########
+
 # Figure 2
 # Affect label > Observe (SFG cluster)
 plot_data_affect <- diff_data %>%
@@ -67,9 +67,8 @@ ggsave("SFG.tiff", SFG_figure, dpi = 600, width = 12, height = 10)
 ggsave("IFG.tiff", IFG_figure, dpi = 600, width = 12, height = 10)
 
 
-###########################
-#### SECONDARY OUTCOME ####
-###########################
+
+######### SECONDARY OUTCOME #########
 
 # Function to create scatterplots with regression lines (sig)
 scatterplot <- function(data, x_var, y_var, x_label, y_label, palette) {
@@ -91,7 +90,6 @@ scatterplot <- function(data, x_var, y_var, x_label, y_label, palette) {
       legend.title = element_blank()
     )
 }
-
 
 
 plot1 <- scatterplot(diff_data, "ObserveSFG_diff", "eac_sad_c_diff", "Change in SFG BOLD Signal", "Change in EAC Sadness (Adolescent Report)", custom_palette)
@@ -204,7 +202,6 @@ eac_c_fear <- ggplot(analysis_data, aes(x = time, y = eac_dismissing_anxious_c, 
     axis.text.y = element_text(size = 14),     # Y-axis text size
     legend.position = "none" 
   )
-
 
 
 # Create the raincloud plot for EAC_C_anger
@@ -346,8 +343,6 @@ eac_p_fear <- ggplot(analysis_data, aes(x = time, y = eac_dismissing_anxious_p, 
   )
 
 
-
-
 # Create the raincloud plot for EAC_P_anger
 eac_p_anger <- ggplot(analysis_data, aes(x = time, y = eac_dismissing_angry_p, fill = group)) +
   # Raincloud plot
@@ -392,8 +387,6 @@ eac_p_anger <- ggplot(analysis_data, aes(x = time, y = eac_dismissing_angry_p, f
     axis.text.y = element_text(size = 14),     # Y-axis text size
     legend.position = "none" 
   )
-
-
 
 
 # Create a panel for EAC
