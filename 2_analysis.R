@@ -106,13 +106,13 @@ p_fdr_matrix <- matrix(p.adjust(as.vector(p_values), method = "fdr"),
 
 
 
-
 ######### Supplementary results: Behavioral Results #########
 
-## EAC child report ---------------
-
+## EAC child report ----------------------------------
 eac_dismissing_sad_c <- lmer(eac_dismissing_sad_c ~ group * time + (1 | tintb_id), data = analysis_data)
 summary(eac_dismissing_sad_c) # p = 0.009
+emm <- emmeans(eac_dismissing_sad_c, ~ group*time)
+summary (contrast(emm, method = "revpairwise", by = "group"), infer = TRUE)
 
 eac_dismissing_anxious_c <- lmer(eac_dismissing_anxious_c ~ group * time + (1 | tintb_id), data = analysis_data)
 summary(eac_dismissing_anxious_c)
@@ -121,7 +121,7 @@ eac_dismissing_angry_c <- lmer(eac_dismissing_angry_c ~ group * time + (1 | tint
 summary(eac_dismissing_angry_c)
 
 
-## EAC parent report ----------------
+## EAC parent report ----------------------------------
 eac_dismissing_sad_p <- lmer(eac_dismissing_sad_p ~ group * time + (1 | tintb_id), data = analysis_data)
 summary(eac_dismissing_sad_p)
 
@@ -145,17 +145,20 @@ summary(rcads_c_anx)
 ## RCADS parent report ----------------------------------
 rcads_p_total <- lmer(rcads_p_total ~ group * time + (1 | tintb_id), data = analysis_data)
 summary(rcads_p_total) # p = 0.0256
+emm <- emmeans(rcads_p_total, ~ group*time)
+summary (contrast(emm, method = "revpairwise", by = "group"), infer = TRUE)
 
 rcads_p_dep <- lmer(rcads_p_dep ~ group * time + (1 | tintb_id), data = analysis_data)
 summary(rcads_p_dep)
 
 rcads_p_anx <- lmer(rcads_p_anx ~ group * time + (1 | tintb_id), data = analysis_data)
 summary(rcads_p_anx) # p = 0.0186
-
+emm <- emmeans(rcads_p_anx, ~ group*time)
+summary (contrast(emm, method = "revpairwise", by = "group"), infer = TRUE)
 
 ## Supplementary contrasts (Affect label > shape) ----------------------------------
 # Affect label > shape (-42,26,-6) OFC
-ShapeOFC <- lmer(ShapeSFG ~ group * time + (1 | tintb_id), data = analysis_data)
+ShapeOFC <- lmer(ShapeOFC ~ group * time + (1 | tintb_id), data = analysis_data)
 summary(ShapeOFC)
 emm <- emmeans(ShapeOFC, ~ group*time)
 summary (contrast(emm, method = "revpairwise", by = "group"), infer = TRUE)
@@ -166,5 +169,3 @@ ShapeIFG <- lmer(ShapeIFG ~ group * time + (1 | tintb_id), data = analysis_data)
 summary(ShapeIFG)
 emm <- emmeans(ShapeIFG, ~ group*time)
 summary (contrast(emm, method = "revpairwise", by = "group"), infer = TRUE)
-
-
