@@ -154,20 +154,17 @@ summary(rcads_p_anx) # p = 0.0186
 
 
 ## Supplementary contrasts (Affect label > shape) ----------------------------------
-# Affect label > shape (12,22,54) SFG
-ShapeSFG <- lmer(ShapeSFG ~ group * time + (1 | tintb_id), data = analysis_data)
-summary(ShapeSFG)
+# Affect label > shape (-42,26,-6) OFC
+ShapeOFC <- lmer(ShapeSFG ~ group * time + (1 | tintb_id), data = analysis_data)
+summary(ShapeOFC)
+emm <- emmeans(ShapeOFC, ~ group*time)
+summary (contrast(emm, method = "revpairwise", by = "group"), infer = TRUE)
 
-# Affect label > shape (48,-66,30) LOG
-ShapeLOG <- lmer(ShapeLOG ~ group * time + (1 | tintb_id), data = analysis_data)
-summary(ShapeLOG)
-
-# Affect label > shape (-42,26,-8) MFG
-ShapeMFG <- lmer(ShapeMFG ~ group * time + (1 | tintb_id), data = analysis_data)
-summary(ShapeMFG)
 
 # Affect label > shape (48,30,10) IFG
 ShapeIFG <- lmer(ShapeIFG ~ group * time + (1 | tintb_id), data = analysis_data)
 summary(ShapeIFG)
+emm <- emmeans(ShapeIFG, ~ group*time)
+summary (contrast(emm, method = "revpairwise", by = "group"), infer = TRUE)
 
 
