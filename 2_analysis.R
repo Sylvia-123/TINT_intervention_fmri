@@ -28,6 +28,7 @@ ObserveSFG <- lmer(ObserveSFG ~ group * time +  (1 | tintb_id), data = analysis_
 summary(ObserveSFG)
 confint(ObserveSFG, level = 0.95, method = "Wald")
 emm_sfg <- emmeans(ObserveSFG, ~ group*time)
+pairs(emm_sfg, by = "group")
 summary (contrast(emm_sfg, method = "revpairwise", by = "group"), infer = TRUE)
 
 # Reappraisal mixed models ----------------------------------
@@ -37,6 +38,7 @@ ReappraisalIFG <- lmer(ReappraisalIFG ~ group * time + (1 | tintb_id), data = an
 summary(ReappraisalIFG)
 confint(ReappraisalIFG, level = 0.95, method = "Wald")
 emm_ifg <- emmeans(ReappraisalIFG, ~ group*time)
+pairs(emm_ifg, by = "group")
 summary (contrast(emm_ifg, method = "revpairwise", by = "group"), infer = TRUE)
 
 
